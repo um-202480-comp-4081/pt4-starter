@@ -1,0 +1,11 @@
+<h1>#<%= @track.order_number %> <%= @track.title %></h1>
+
+<ul>
+  <li>Artist: <%= @track.artist ? @track.artist : '(no given)' %></li>
+  <li>Length: <%= @track.length_in_seconds / 60 %>:<%= "%02d" % (@track.length_in_seconds % 60) %></li>
+</ul>
+
+<p>
+  <%= link_to 'Back to Playlist', root_path %>
+</p>
+

@@ -10,8 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_19_192111) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tracks", force: :cascade do |t|
+    t.integer "order_number"
+    t.string "title"
+    t.string "artist"
+    t.integer "length_in_seconds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
